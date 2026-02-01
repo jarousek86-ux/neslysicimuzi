@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muž na festivalu - Neslyšící muži</title>
+    <meta name="description" content="Fotogalerie a videa z mužských festivalů pro neslyšící (2022, 2023, 2025). Sdílení, přednášky a síla komunity.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+        }
+
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+
+        #lightbox img {
+            max-width: 85%;
+            max-height: 85%;
+            border: 2px solid white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-close {
+            position: absolute; top: 20px; right: 30px;
+            color: white; font-size: 50px; cursor: pointer;
+        }
+
+        .lightbox-prev, .lightbox-next {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: none; border: none; color: white;
+            font-size: 60px; cursor: pointer; padding: 20px;
+            transition: color 0.3s;
+        }
+
+        .lightbox-prev:hover, .lightbox-next:hover { color: #aaa; }
+        .lightbox-prev { left: 10px; }
+        .lightbox-next { right: 10px; }
+
+        .video-wrapper {
+            margin: 40px 0;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background-color: #000;
+        }
+
+        .video-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+            color: #333;
+            text-align: left;
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .lightbox-prev, .lightbox-next { font-size: 40px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="header-logo">
+                <img src="pruhledne.png" alt="Logo">
+            </a>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Úvodní stránka</a></li>
+                    <li><a href="o-nas.html">O nás</a></li>
+                    <li><a href="aktuality.html">Aktuality</a></li>
+                    <li><a href="muz-na-festivalu.html">Muž na festivalu</a></li>
+                    <li><a href="workshop.html">Workshop</a></li>
+                </ul>
+            </nav>
+            <p class="header-subtitle">zdraví, rodina, disciplína, finance – cesta k lepšímu životu.</p>
+            <div class="header-social">
+                <div class="header-social-icons">
+                    <a href="https://www.instagram.com/neslysici_muzi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.9a1.1 1.1 0 11-2.2 0 1.1 1.1 0 012.2 0z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/neslysicimuzi" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+                <span class="header-social-text">Sleduj naši cestu</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="festival-section">
+            <div class="container">
+                <h1 class="page-header-title">Muž na festivalu</h1>
+                <p class="festival-intro" style="margin-bottom: 40px; color: #555;">Klid, síla a prostor pro sdílení skutečných příběhů.</p>
+                
+                <div class="festival-info-block">
+                    <h2>Neslyšící muž na cestě I. – 2022</h2>
+                    <div id="gallery-2022" class="gallery-grid"></div>
+                </div>
+
+                <div class="festival-info-block">
+                    <h2>Neslyšící muž na cestě II. – 2023</h2>
+                    <div class="video-wrapper" style="margin: 20px 0;">
+                        <video controls>
+                            <source src="YTDowncom_YouTube_Muzsky-festival-2023-TRAILER_Media_h9m3xN5e7yQ_002_720p.mp4" type="video/mp4">
+                            Váš prohlížeč nepodporuje přehrávání videa.
+                        </video>
+                    </div>
+                    <div id="gallery-2023" class="gallery-grid"></div>
+                </div>
+
+                <div class="festival-info-block">
+                    <h2>Neslyšící muž na cestě III. – 2025</h2>
+                    <div class="video-wrapper" style="margin: 20px 0;">
+                        <video controls>
+                            <source src="YTDowncom_YouTube_Media_WUL05SPU_Ts_001_1080p.mp4" type="video/mp4">
+                            Váš prohlížeč nepodporuje přehrávání videa.
+                        </video>
+                    </div>
+                    <div id="gallery-2025" class="gallery-grid"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Neslyšící muži v ČR</p>
+        </div>
+    </footer>
+
+    <div id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <button class="lightbox-prev">&#10094;</button>
+        <img src="" alt="Zvětšený náhled">
+        <button class="lightbox-next">&#10095;</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const galleries = {
+            'gallery-2022': [
+                '2.webp',
+                '11.webp',
+                '69.webp',
+                '100.webp',
+                '104.webp',
+                '116.webp'
+            ],
+            'gallery-2023': [
+                'IMG_7836.webp',
+                'IMG_7847.webp',
+                'IMG_7878.webp',
+                'IMG_7978.webp',
+                'IMG_8052.webp',
+                'IMG_8075.webp'
+            ],
+            'gallery-2025': [
+                'untitled (1 of 57) (1).webp',
+                'untitled (3 of 57).webp',
+                'untitled (5 of 57).webp',
+                'untitled (8 of 57).webp',
+                'untitled (12 of 57).webp',
+                'untitled (17 of 57).webp',
+                'untitled (19 of 57).webp',
+                'untitled (20 of 57).webp',
+                'untitled (22 of 57).webp',
+                'untitled (25 of 57).webp',
+                'untitled (29 of 57).webp',
+                'untitled (36 of 57).webp',
+                'untitled (38 of 57).webp',
+                'untitled (41 of 57).webp',
+                'untitled (46 of 57).webp',
+                'untitled (48 of 57).webp',
+                'untitled (49 of 57).webp',
+                'untitled (50 of 57).webp',
+                'untitled (52 of 57).webp',
+                'untitled (55 of 57).webp',
+                'untitled (57 of 57).webp'
+            ]
+        };
+
+        const allImages = [];
+        let currentIndex = 0;
+
+        Object.entries(galleries).forEach(([id, images]) => {
+            const container = document.getElementById(id);
+            if (container) {
+                images.forEach(src => {
+                    const img = document.createElement('img');
+                    img.src = src;
+                    img.alt = "Foto z festivalu " + id.replace('gallery-', '');
+                    img.loading = 'lazy';
+                    const idx = allImages.length;
+                    allImages.push(src);
+                    img.onclick = () => {
+                        currentIndex = idx;
+                        updateLightbox();
+                        document.getElementById('lightbox').style.display = 'flex';
+                    };
+                    container.appendChild(img);
+                });
+            }
+        });
+
+        const lbImg = document.querySelector('#lightbox img');
+        const updateLightbox = () => {
+            lbImg.classList.add('fade');
+            setTimeout(() => {
+                lbImg.src = allImages[currentIndex];
+                lbImg.classList.remove('fade');
+            }, 300);
+        };
+        const closeLightbox = () => { document.getElementById('lightbox').style.display = 'none'; };
+        const next = (e) => { if(e) e.stopPropagation(); currentIndex = (currentIndex + 1) % allImages.length; updateLightbox(); };
+        const prev = (e) => { if(e) e.stopPropagation(); currentIndex = (currentIndex - 1 + allImages.length) % allImages.length; updateLightbox(); };
+
+        document.querySelector('.lightbox-close').onclick = closeLightbox;
+        document.querySelector('.lightbox-next').onclick = next;
+        document.querySelector('.lightbox-prev').onclick = prev;
+        document.getElementById('lightbox').onclick = (e) => { if(e.target.id === 'lightbox') closeLightbox(); };
+
+        document.addEventListener('keydown', (e) => {
+            if(document.getElementById('lightbox').style.display === 'flex') {
+                if(e.key === 'ArrowRight') next();
+                if(e.key === 'ArrowLeft') prev();
+                if(e.key === 'Escape') closeLightbox();
+            }
+        });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
