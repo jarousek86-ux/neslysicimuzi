@@ -28,3 +28,8 @@ Neslyšící developer a fotograf
 - registrace uživatelů
 - komunitní chat
 - mobilní verze
+## 🌐 Náhled webu
+
+<p align="center">
+  <img src="nahled-webu.png" width="900">
+</p>
