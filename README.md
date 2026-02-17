@@ -5,33 +5,56 @@
 </p>
 
 
-# Neslyšící Muži
+# 👋 Ahoj, já jsem Jaroslav Klein
 
-Tento projekt je webová stránka pro komunitu neslyšících mužů.
+🎯 Budoucí Front-End Developer  
+👨‍👩‍👧‍👦 Rodinný muž | Fotograf | Neslyšící komunita  
 
-## 📌 O projektu
-Cílem webu je:
-- spojovat neslyšící muže
-- sdílet informace a akce
-- podporovat komunitu
-- prezentovat projekty a aktivity
+---
 
-## 🛠 Technologie
-Web je vytvořen pomocí:
+## 🚀 O mně
+
+Jsem začínající IT developer z České republiky.  
+Momentálně se učím:
+
 - HTML
 - CSS
 - JavaScript
+- GitHub
 
-## 📂 Jak otevřít web
-1. Stáhni projekt
-2. Otevři soubor `index.html` v prohlížeči
+Můj cíl je změnit kariéru z fyzické práce na IT.
 
-## 🌍 Autor
-Jaroslav Klein  
-Neslyšící developer a fotograf
+---
 
-## 🚀 Budoucí plán
-- přidání databáze
-- registrace uživatelů
-- komunitní chat
-- mobilní verze
+## 💻 Moje projekty
+
+### ⭐ Neslyšící Muži – komunitní web
+👉 https://jarousek86-ux.github.io/neslysicimuzi/
+
+Web pro komunitu neslyšících mužů:
+- informace
+- akce
+- podpora komunity
+
+---
+
+## 🛠️ Technologie
+
+- HTML
+- CSS
+- JavaScript
+- GitHub Pages
+
+---
+
+## 📈 Aktuální cíl
+
+- stát se junior front-end developerem
+- získat první IT práci
+- vytvářet smysluplné projekty
+
+---
+
+## 🌍 Kontakt
+
+📍 Czech Republic  
