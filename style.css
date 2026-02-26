@@ -45,6 +45,7 @@ header .container {
     align-items: center;
     text-align: center;
     position: relative;
+    overflow: visible;
 }
 
 .header-logo {
@@ -52,7 +53,7 @@ header .container {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    height: 140px; /* Nastavte výšku dle potřeby */
+    height: 170px;
     display: block;
 }
 
@@ -345,9 +346,10 @@ footer {
 }
 
 #loader-overlay img {
-    width: 360px;
-    max-width: 80%;
+    width: min(460px, 82vw);
+    max-height: 78vh;
     height: auto;
+    object-fit: contain;
     opacity: 0;
     transform: scale(0.94);
     animation: logoReveal 1s ease-out forwards;
@@ -599,7 +601,7 @@ footer {
     }
 
     .header-logo {
-        height: 60px;
+        height: 88px;
         margin-bottom: 5px;
     }
 
