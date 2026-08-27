@@ -9,6 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="favicon-180.png">
+    <meta property="og:title" content="Neslyšící muži v ČR – Komunita">
+    <meta property="og:description" content="Komunita pro neslyšící muže. Budujeme sílu v tichu, disciplíně a odpovědnosti. Zdraví, rodina, finance a směr.">
+    <meta property="og:image" content="og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jarousek86-ux.github.io/neslysicimuzi/">
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -35,7 +43,7 @@
     <header>
         <div class="container">
             <a href="index.html" class="header-logo">
-                <img src="pruhledne.png" alt="Logo">
+                <img src="logo.webp" alt="Logo">
             </a>
             <button class="nav-toggle" aria-label="Menu">
                 <span></span>
@@ -49,6 +57,7 @@
                     <li><a href="aktuality.html">Aktuality</a></li>
                     <li><a href="muz-na-festivalu.html">Muž na festivalu</a></li>
                     <li><a href="workshop.html">Workshop</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
             <p class="header-subtitle">zdraví, rodina, disciplína, finance – cesta k lepšímu životu.</p>
@@ -70,10 +79,12 @@
 
     <main>
         <section class="hero">
-            <video id="heroVideo" playsinline autoplay muted loop preload="metadata">
-                <source src="YTDowncom_YouTube_Media_WUL05SPU_Ts_001_1080p.mp4" type="video/mp4">
+            <video id="heroVideo" playsinline autoplay muted loop preload="metadata" poster="hero-poster.webp">
+                <source src="festival-2025.mp4" type="video/mp4">
+                <track kind="captions" src="festival-2025.vtt" srclang="cs" label="Čeština" default>
             </video>
             <button id="videoPlayBtn" class="videoPlayBtn" type="button" hidden>Přehrát video</button>
+            <p class="visually-hidden">Video ukazuje skupinu mužů při aktivitách v přírodě – cvičení, sdílení a setkání v rámci mužského festivalu Neslyšící muži.</p>
             <div class="container">
                 <h1 class="hero-title">Neslyšící <span>muži</span></h1>
                 <div class="hero-divider"></div>
@@ -82,21 +93,22 @@
                 <a href="aktuality.html" class="btn btn-hero-cta reveal">Zjistit více</a>
             </div>
         </section>
-    </main>
-<section id="about" class="about-section">
-    <div class="container">
-        <div class="about-flex">
-            <div class="about-text">
-                <p>Muž nepotřebuje křičet, aby byl slyšet – jeho činy mluví za něj.</p>
-                <p>Buduje sílu v tichu, disciplíně a každodenní odpovědnosti.</p>
-                <p>Stojí pevně za svou rodinou, hodnotami a směrem, který si zvolil.</p>
-                <p>Neporovnává se s ostatními – soutěží jen se včerejší verzí sebe.</p>
-                <p>Věří, že skutečná síla začíná uvnitř a roste činy, ne slovy.</p>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-flex">
+                    <div class="about-text">
+                        <p>Muž nepotřebuje křičet, aby byl slyšet – jeho činy mluví za něj.</p>
+                        <p>Buduje sílu v tichu, disciplíně a každodenní odpovědnosti.</p>
+                        <p>Stojí pevně za svou rodinou, hodnotami a směrem, který si zvolil.</p>
+                        <p>Neporovnává se s ostatními – soutěží jen se včerejší verzí sebe.</p>
+                        <p>Věří, že skutečná síla začíná uvnitř a roste činy, ne slovy.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-    <section class="cards-section">
+        </section>
+
+        <section class="cards-section">
         <div class="container">
             <div class="cards-grid">
                 <a href="o-nas.html" class="card reveal">
@@ -117,7 +129,8 @@
                 </a>
             </div>
         </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <div class="container">

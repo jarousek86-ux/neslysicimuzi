@@ -11,26 +11,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const v = document.getElementById('heroVideo');
     const btn = document.getElementById('videoPlayBtn');
-    
-    if (v) {
-        v.muted = true;
-        v.playsInline = true;
 
-        const p = v.play();
-        if (p && typeof p.catch === 'function') {
-            p.catch(() => {
-                if (btn) {
-                    btn.hidden = false;
-                    btn.addEventListener('click', async () => {
-                        try {
-                            await v.play();
-                            btn.hidden = true;
-                        } catch (e) {
-                            console.error("Video play failed:", e);
-                        }
-                    });
-                }
-            });
+    if (v) {
+        const isMobile = window.innerWidth < 768;
+
+        if (isMobile) {
+            v.removeAttribute('autoplay');
+            v.pause();
+            if (btn) {
+                btn.hidden = false;
+                btn.addEventListener('click', async () => {
+                    try {
+                        v.muted = true;
+                        await v.play();
+                        btn.hidden = true;
+                    } catch (e) {}
+                });
+            }
+        } else {
+            v.muted = true;
+            v.playsInline = true;
+            const p = v.play();
+            if (p && typeof p.catch === 'function') {
+                p.catch(() => {
+                    if (btn) {
+                        btn.hidden = false;
+                        btn.addEventListener('click', async () => {
+                            try {
+                                await v.play();
+                                btn.hidden = true;
+                            } catch (e) {}
+                        });
+                    }
+                });
+            }
         }
     }
 
