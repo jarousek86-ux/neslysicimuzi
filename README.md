@@ -60,6 +60,10 @@ V prohlížeči otevři [http://localhost:8000](http://localhost:8000). Server u
 - Doplnit automatické kontroly odkazů a HTML.
 - Dále ověřovat přístupnost a rychlost načítání na mobilních zařízeních.
 
+## Licence
+
+Zdrojový kód je dostupný pod licencí MIT, viz [LICENSE](LICENSE). Fotografie, videa a logo nejsou součástí licence – všechna práva vyhrazena.
+
 ## Autor
 
 [Jaroslav Klein](https://github.com/jarousek86-ux) – komunitní web a rozvoj front-endových dovedností.
