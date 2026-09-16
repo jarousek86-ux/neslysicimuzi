@@ -9,11 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon-32.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="favicon-180.png">
+    <link rel="icon" href="assets/images/favicon-32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="assets/images/favicon-180.png">
     <meta property="og:title" content="Mužský festival – Neslyšící muži v ČR">
     <meta property="og:description" content="Fotogalerie a videa z mužských festivalů pro neslyšící (2022, 2023, 2025). Sdílení, přednášky a síla komunity.">
-    <meta property="og:image" content="og-image.png">
+    <meta property="og:image" content="assets/images/og-image.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jarousek86-ux.github.io/neslysicimuzi/muz-na-festivalu.html">
     <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@
     <header>
         <div class="container">
             <a href="index.html" class="header-logo">
-                <img src="logo.webp" alt="Logo">
+                <img src="assets/images/logo.webp" alt="Logo">
             </a>
             <button class="nav-toggle" aria-label="Menu">
                 <span></span>
@@ -71,8 +71,8 @@
                     <h2>Neslyšící muž na cestě II. – 2023</h2>
                     <div class="video-wrapper">
                         <video controls>
-                            <source src="festival-2023.mp4" type="video/mp4">
-                            <track kind="captions" src="festival-2023.vtt" srclang="cs" label="Čeština" default>
+                            <source src="assets/videos/festival-2023.mp4" type="video/mp4">
+                            <track kind="captions" src="assets/captions/festival-2023.vtt" srclang="cs" label="Čeština" default>
                             Váš prohlížeč nepodporuje přehrávání videa.
                         </video>
                     </div>
@@ -83,8 +83,8 @@
                     <h2>Neslyšící muž na cestě III. – 2025</h2>
                     <div class="video-wrapper">
                         <video controls>
-                            <source src="festival-2025.mp4" type="video/mp4">
-                            <track kind="captions" src="festival-2025.vtt" srclang="cs" label="Čeština" default>
+                            <source src="assets/videos/festival-2025.mp4" type="video/mp4">
+                            <track kind="captions" src="assets/captions/festival-2025.vtt" srclang="cs" label="Čeština" default>
                             Váš prohlížeč nepodporuje přehrávání videa.
                         </video>
                     </div>
@@ -111,43 +111,43 @@
         document.addEventListener('DOMContentLoaded', function() {
         const galleries = {
             'gallery-2022': [
-                '2.webp',
-                '11.webp',
-                '69.webp',
-                '100.webp',
-                '104.webp',
-                '116.webp'
+                'assets/images/foto-2.webp',
+                'assets/images/foto-11.webp',
+                'assets/images/foto-69.webp',
+                'assets/images/foto-100.webp',
+                'assets/images/foto-104.webp',
+                'assets/images/foto-116.webp'
             ],
             'gallery-2023': [
-                'IMG_7836.webp',
-                'IMG_7847.webp',
-                'IMG_7878.webp',
-                'IMG_7978.webp',
-                'IMG_8052.webp',
-                'IMG_8075.webp'
+                'assets/images/foto-7836.webp',
+                'assets/images/foto-7847.webp',
+                'assets/images/foto-7878.webp',
+                'assets/images/foto-7978.webp',
+                'assets/images/foto-8052.webp',
+                'assets/images/foto-8075.webp'
             ],
             'gallery-2025': [
-                'untitled (1 of 57) (1).webp',
-                'untitled (3 of 57).webp',
-                'untitled (5 of 57).webp',
-                'untitled (8 of 57).webp',
-                'untitled (12 of 57).webp',
-                'untitled (17 of 57).webp',
-                'untitled (19 of 57).webp',
-                'untitled (20 of 57).webp',
-                'untitled (22 of 57).webp',
-                'untitled (25 of 57).webp',
-                'untitled (29 of 57).webp',
-                'untitled (36 of 57).webp',
-                'untitled (38 of 57).webp',
-                'untitled (41 of 57).webp',
-                'untitled (46 of 57).webp',
-                'untitled (48 of 57).webp',
-                'untitled (49 of 57).webp',
-                'untitled (50 of 57).webp',
-                'untitled (52 of 57).webp',
-                'untitled (55 of 57).webp',
-                'untitled (57 of 57).webp'
+                'assets/images/galerie-01.webp',
+                'assets/images/galerie-03.webp',
+                'assets/images/galerie-05.webp',
+                'assets/images/galerie-08.webp',
+                'assets/images/galerie-12.webp',
+                'assets/images/galerie-17.webp',
+                'assets/images/galerie-19.webp',
+                'assets/images/galerie-20.webp',
+                'assets/images/galerie-22.webp',
+                'assets/images/galerie-25.webp',
+                'assets/images/galerie-29.webp',
+                'assets/images/galerie-36.webp',
+                'assets/images/galerie-38.webp',
+                'assets/images/galerie-41.webp',
+                'assets/images/galerie-46.webp',
+                'assets/images/galerie-48.webp',
+                'assets/images/galerie-49.webp',
+                'assets/images/galerie-50.webp',
+                'assets/images/galerie-52.webp',
+                'assets/images/galerie-55.webp',
+                'assets/images/galerie-57.webp'
             ]
         };
 

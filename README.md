@@ -4,7 +4,7 @@ Komunitní web pro neslyšící muže v České republice. Představuje komunitu
 
 **[Otevřít web](https://jarousek86-ux.github.io/neslysicimuzi/)**
 
-![Náhled komunitního webu Neslyšící muži](nahled-webu.png)
+![Náhled komunitního webu Neslyšící muži](assets/images/nahled-webu.png)
 
 ## Obsah a funkce
 
@@ -43,7 +43,9 @@ V prohlížeči otevři [http://localhost:8000](http://localhost:8000). Server u
 | `kontakt.html` | Kontakty |
 | `style.css` | Vzhled a responzivní rozložení |
 | `script.js` | Sdílené chování navigace, videa a animací |
-| `*.webp`, `*.png`, `*.mp4`, `*.vtt` | Obrázky, videa a titulky |
+| `assets/images/` | Obrázky a náhled webu |
+| `assets/videos/` | Videa |
+| `assets/captions/` | České titulky WebVTT |
 
 ## Před zveřejněním změn
 
@@ -55,7 +57,6 @@ V prohlížeči otevři [http://localhost:8000](http://localhost:8000). Server u
 
 ## Další rozvoj
 
-- Uspořádat média do přehledných složek a sjednotit jejich názvy.
 - Doplnit automatické kontroly odkazů a HTML.
 - Dále ověřovat přístupnost a rychlost načítání na mobilních zařízeních.
 
